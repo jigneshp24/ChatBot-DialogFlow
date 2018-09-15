@@ -5,13 +5,15 @@ Node.js chatbot with Dialogflow integration
 
 Git clone current repository in to your machine
 
-Run -- npm install in to the clone repository
+Run "npm install" in to the clone repository
 
-Run node app.js 
+Run "node app.js" in the cloned repository  
 
-Run Bot emulator 
+Open Bot emulator 
 
 Provide http://localhost:7008/api/messages URI in the emulator (Leave Microsoft App Id and Password empry)
+
+Your chatbot should be running at this point
 
 Prerequisite: 
 You must have node installed on your machine
