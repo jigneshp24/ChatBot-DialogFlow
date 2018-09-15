@@ -4,7 +4,7 @@ var apiai = require('apiai');
 
 // Setup Restify Server
 var app = express();
-const server = app.listen(process.env.PORT || 3978,
+const server = app.listen(process.env.PORT || 7008,
 function () {
     console.log('%s listening to %s', server.address().port, app.settings.env);
 });
@@ -15,7 +15,7 @@ var connector = new builder.ChatConnector({
     appPassword: process.env.MICROSOFT_APP_PASSWORD
 });
 // Listen for messages from users
-var api = new apiai("your api ai Id");
+var api = new apiai("YOUR_DIALOGFLOW_CLIENT_ACCESS_TOKEN");
 app.post('/api/messages', connector.listen());
 // Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
 
