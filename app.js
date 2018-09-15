@@ -25,11 +25,11 @@ app.post('/api/messages', connector.listen());
         var request = api.textRequest(session.message.text, {
             sessionId: 'elizza_test'
         });
-
+        // On Success
         request.on('response',function(response){ 
             session.send(response.result.fulfillment.speech);
         });
-
+        // On Failure
         request.on('error', function(error) {
             var bot = new builder.UniversalBot(connector, function (session) {
                 session.send(error);
